@@ -1,0 +1,384 @@
+/* === RESET Y FUENTES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* === HEADER === */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("https://images.unsplash.com/photo-1555374018-13a8994ab246")
+      center/cover no-repeat;
+  color: #fff;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.hero-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+/* === BOTÓN PRINCIPAL === */
+.cta-button {
+  background-color: #2848d6;
+  color: white;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.cta-button:hover {
+  background-color: #0b046e;
+}
+
+/* === SECCIONES GENERALES === */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* === FORMULARIO DE CONTACTO === */
+.formulario-contacto {
+  background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+  padding: 60px 20px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: 60px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+  padding: 15px 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+#contactForm input:focus,
+#contactForm select:focus,
+#contactForm textarea:focus {
+  border-color: #d62828;
+  outline: none;
+  box-shadow: 0 0 5px rgba(214, 40, 40, 0.3);
+}
+
+#contactForm textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#formMessage {
+  margin-top: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: #2d2d2d;
+}
+
+/* === PRESENTACIÓN PERSONAL === */
+.presentacion {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  background-color: #ececec;
+  padding: 60px 20px;
+  margin-top: 60px;
+  border-radius: 10px;
+}
+
+.presentacion img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.presentacion-texto {
+  flex: 1;
+}
+
+.presentacion-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.presentacion-texto p {
+  margin-bottom: 15px;
+}
+
+.presentacion strong {
+  display: block;
+  margin-top: 25px;
+  font-size: 1.2rem;
+}
+
+/* === ¿POR QUÉ ELEGIRME? === */
+.porque-escoger {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.porque-escoger img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* === ÁREAS DE PRÁCTICA === */
+.testimonios-section {
+    padding: 4rem 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .titulo-testimonios {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonios-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    height: 200px;
+  }
+  
+  .testimonio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 1s ease, transform 1s ease;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .testimonio.activo {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+  }
+  
+/* === WHATSAPP === */
+.whatsapp-section {
+  background: url("https://images.unsplash.com/photo-1573497019410-0c9e22f4b6a0")
+    center/cover no-repeat;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.whatsapp-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.whatsapp-section a {
+  background-color: #25d366;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  border-radius: 50px;
+  padding: 12px 18px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 1s forwards;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.whatsapp-float i {
+  font-size: 24px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-info {
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.footer-info a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-redes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-redes a {
+  color: #f1f1f1;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-redes a:hover {
+  color: #d62828;
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 992px) {
+  .servicios-grid {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .derecha,
+  .izquierda {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contenido-derecha {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .porque-escoger {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    gap: 25px;
+  }
+
+  .footer-info {
+    font-size: 0.9rem;
+  }
+
+  .footer-redes a {
+    font-size: 1.4rem;
+  }
+}
