@@ -206,15 +206,16 @@
           placeholder="Correo electrónico"
           required
         />
-        <select name="tipo" required>
-          <div>
-            <option value="">Tipo de problema legal</option>
-            <option value="familiar">Familiar</option>
-            <option value="penal">Penal</option>
-            <option value="laboral">Laboral</option>
-            <option value="civil">Civil</option>
-          </div>
+        <select title="seleccionar" name="tipo" id="tipo" required>
+          <option value="" hidden="true" disabled selected>
+            Seleccione el tipo de problema legal
+          </option>
+          <option value="familiar">Familiar</option>
+          <option value="penal">Penal</option>
+          <option value="laboral">Laboral</option>
+          <option value="civil">Civil</option>
         </select>
+
         <textarea
           name="mensaje"
           placeholder="Cuéntanos brevemente tu situación"
@@ -237,15 +238,26 @@
           </p>
         </div>
         <div class="footer-redes">
-          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+          >
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Twitter"
+          >
             <i class="fab fa-x-twitter"></i>
           </a>
           <a
             href="https://instagram.com"
             target="_blank"
+            rel="noopener"
             aria-label="Instagram"
           >
             <i class="fab fa-instagram"></i>
@@ -253,6 +265,7 @@
           <a
             href="https://wa.me/15551234567"
             target="_blank"
+            rel="noopener"
             aria-label="WhatsApp"
           >
             <i class="fab fa-whatsapp"></i>
@@ -261,38 +274,12 @@
       </div>
     </footer>
 
-    <script>
-      const testimonios = document.querySelectorAll(".testimonio");
-      let indice = 0;
-
-      function actualizarCarrusel() {
-        testimonios.forEach((testimonio, i) => {
-          testimonio.classList.remove("activo", "prev", "next");
-
-          if (i === indice) {
-            testimonio.classList.add("activo");
-          } else if (
-            i ===
-            (indice - 1 + testimonios.length) % testimonios.length
-          ) {
-            testimonio.classList.add("prev");
-          } else if (i === (indice + 1) % testimonios.length) {
-            testimonio.classList.add("next");
-          }
-        });
-      }
-
-      actualizarCarrusel();
-
-      setInterval(() => {
-        indice = (indice + 1) % testimonios.length;
-        actualizarCarrusel();
-      }, 5000);
-    </script>
+    <script src="js/main.js"></script>
     <a
       href="https://wa.me/15551234567?text=Hola%2C%20necesito%20asesor%C3%ADa%20legal%20por%20favor."
       class="whatsapp-float"
       target="_blank"
+      rel="noopener"
       aria-label="Chatea por WhatsApp"
     >
       <div class="whatsapp-content">
