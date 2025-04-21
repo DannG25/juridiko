@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -16,89 +17,157 @@
   </head>
   <body>
     <header class="hero-section">
+      <div class="hero-video-overlay"></div>
+      <video autoplay muted loop class="hero-video">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-lawyer-reading-a-document-17605-large.mp4" type="video/mp4">
+      </video>
+      
       <div class="container">
-        <h1 class="hero-title">¿Necesitas asesoría legal confiable?</h1>
-        <p class="hero-subtitle">
-          En <strong>Defensa Legal</strong>, contamos con un equipo de abogados
-          especializados listos para ayudarte hoy mismo.
-        </p>
-        <button
-          class="cta-button"
-          role="button"
-          aria-label="Solicita tu consulta gratuita"
-          onclick="document.querySelector('#formulario').scrollIntoView({ behavior: 'smooth' });"
-        >
-          Solicita tu consulta gratuita
-        </button>
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="title-line">Asesoría Legal</span>
+            <span class="title-line highlight">Profesional y Confiable</span>
+          </h1>
+          
+          <p class="hero-subtitle">
+            En <strong class="firm-name">Defensa Legal</strong>, protegemos tus derechos con <br>
+            <span class="typed-text"></span>
+          </p>
+          
+          <div class="hero-buttons">
+            <button class="cta-button primary" onclick="document.querySelector('#formulario').scrollIntoView({ behavior: 'smooth' });">
+              <i class="fas fa-calendar-check"></i> Consulta Gratuita
+            </button>
+            <a href="tel:+573001234567" class="cta-button secondary">
+              <i class="fas fa-phone-alt"></i> Llamar Ahora
+            </a>
+          </div>
+          
+          <div class="hero-features">
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>+15 años de experiencia</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>+500 casos resueltos</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Atención personalizada</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-scroll-down">
+          <span>Desplázate para conocer más</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
       </div>
     </header>
+    <div class="transition-gradient"></div>
 
     <section class="presentacion">
-      <img
-        src="https://st2.depositphotos.com/4431055/11854/i/450/depositphotos_118543600-stock-photo-handsome-caucasian-lawyer.jpg"
-        alt="Abogada Francisca Garcia"
-      />
-      <div class="presentacion-texto">
-        <h2>Mi Trayectoria Profesional como Abogado en Cartagena</h2>
-        <p>
-          Abogado, con experiencia en constitución de empresas, recuperación de
-          cartera, defensas en procesos penales, pero sobre todo, un abogado con
-          la responsabilidad y compromiso con cada uno de los negocios o casos a
-          cargo como bandera profesional.
-        </p>
-        <p>
-          Sin embargo, lo que verdaderamente distingue mi práctica es mi
-          compromiso inquebrantable con cada uno de los negocios o casos que
-          tomo bajo mi responsabilidad.
-        </p>
-        <p>
-          Considero que la confianza y el compromiso con mis clientes son
-          fundamentales para alcanzar resultados óptimos. Por lo tanto, hago de
-          la responsabilidad y el compromiso mis principales valores
-          profesionales, asegurando así un acompañamiento integral y efectivo en
-          cada etapa del proceso legal.
-        </p>
-        <strong>Luis Cabarcas Hernández.</strong>
-        <p><em>Servicios Legales Accesibles y 100% Profesionales</em></p>
+      <div class="presentacion-container">
+        <div class="presentacion-imagen">
+          <div class="imagen-wrapper">
+            <img
+              src="https://st2.depositphotos.com/4431055/11854/i/450/depositphotos_118543600-stock-photo-handsome-caucasian-lawyer.jpg"
+              alt="Abogado Luis Cabarcas Hernández"
+              class="abogado-img"
+            />
+            <div class="img-decoracion"></div>
+          </div>
+          <div class="badge-experiencia">
+            <span class="anos-experiencia">15+</span>
+            <span>Años de experiencia</span>
+          </div>
+        </div>
+        
+        <div class="presentacion-texto">
+          <h2 class="titulo-presentacion">
+            <span class="titulo-destacado">Mi Trayectoria Profesional</span><br>
+            <span class="subtitulo">como Abogado en Cartagena</span>
+          </h2>
+          
+          <div class="descripcion">
+            <div class="punto-destacado">
+              <i class="fas fa-balance-scale icono-destacado"></i>
+              <p>Especialista en constitución de empresas y recuperación de cartera con enfoque estratégico.</p>
+            </div>
+            
+            <div class="punto-destacado">
+              <i class="fas fa-gavel icono-destacado"></i>
+              <p>Amplia experiencia en defensas en procesos penales con altos índices de éxito.</p>
+            </div>
+            
+            <div class="punto-destacado">
+              <i class="fas fa-handshake icono-destacado"></i>
+              <p>Compromiso inquebrantable con cada caso, garantizando acompañamiento integral en todas las etapas legales.</p>
+            </div>
+          </div>
+          
+          <div class="firma">
+            <div class="linea-decorativa"></div>
+            <strong class="nombre">Luis Cabarcas Hernández</strong>
+            <p class="eslogan">Servicios Legales Accesibles y 100% Profesionales</p>
+          </div>
+          
+          <a href="#contacto" class="boton-cta">Consulta Gratuita</a>
+        </div>
       </div>
     </section>
 
     <section class="porque-escoger">
-      <div class="porque-contenido">
-        <div class="porque-imagen">
-          <img
-            src="https://images.unsplash.com/photo-1581090700227-1e8e967e5c63"
-            alt="Confianza"
-          />
+      <div class="container">
+        <h2 class="section-title">¿Por qué confiar en mi experiencia legal?</h2>
+        <div class="porque-grid">
+          <div class="porque-card">
+            <div class="card-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Confianza Absoluta</h3>
+            <p>Confidencialidad y ética profesional garantizadas en cada caso.</p>
+          </div>
+          
+          <div class="porque-card">
+            <div class="card-icon">
+              <i class="fa-solid fa-gavel"></i>
+            </div>
+            <h3>Experiencia Integral</h3>
+            <p>Amplio conocimiento en múltiples ramas del derecho.</p>
+          </div>
+          
+          <div class="porque-card">
+            <div class="card-icon">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <h3>Estrategias Personalizadas</h3>
+            <p>Enfoque adaptado a las particularidades de cada cliente.</p>
+          </div>
+          
+          <div class="porque-card">
+            <div class="card-icon">
+              <i class="fa-solid fa-thumbs-up"></i>
+            </div>
+            <h3>Resultados Comprobados</h3>
+            <p>Altos índices de éxito basados en casos resueltos.</p>
+          </div>
         </div>
-        <div class="porque-texto">
-          <h2>¿Por qué escogerme?</h2>
-          <p>
-            Me enfoco en comprender a fondo tu situación para ofrecerte la mejor
-            defensa legal posible. Mi reputación está respaldada por cientos de
-            casos resueltos y clientes satisfechos.
-          </p>
-          <ul class="porque-beneficios">
-            <li>
-              <i class="fa-solid fa-shield-halved"></i> Confianza y
-              confidencialidad garantizadas
-            </li>
-            <li>
-              <i class="fa-solid fa-gavel"></i> Experiencia en distintas ramas
-              del derecho
-            </li>
-            <li>
-              <i class="fa-solid fa-scale-balanced"></i> Enfoque estratégico y
-              personalizado
-            </li>
-            <li>
-              <i class="fa-solid fa-thumbs-up"></i> Altos índices de éxito y
-              satisfacción
-            </li>
-          </ul>
+        
+        <div class="porque-content">
+          <div class="porque-image">
+            <img src="https://th.bing.com/th/id/OIP.rsjd1JYLQFIEKXaS_Rv8wgHaFM?rs=1&pid=ImgDetMain" alt="Abogado profesional" loading="lazy">
+          </div>
+          <div class="porque-desc">
+            <p class="highlight">Más de 15 años protegiendo los derechos de mis clientes</p>
+            <p>Mi enfoque va más allá de la simple representación legal. Analizo minuciosamente cada situación para desarrollar estrategias efectivas que maximicen tus posibilidades de éxito.</p>
+            <a href="#contacto" class="cta-button">Consulta gratuita inicial</a>
+          </div>
         </div>
       </div>
     </section>
+    
 
     <section class="servicios-section">
       <h2 class="titulo-seccion">Servicios y Consultorías</h2>
@@ -161,31 +230,110 @@
     </section>
 
     <section class="testimonios-section">
-      <h2 class="titulo-testimonios">Lo que opinan nuestros clientes</h2>
-      <div class="testimonios-carousel">
-        <div class="testimonio">
-          <p>“El abogado Juan me ayudó…”</p>
-          <strong>- Laura G.</strong>
-        </div>
-        <div class="testimonio">
-          <p>“Excelente atención y asesoría…”</p>
-          <strong>- Carlos M.</strong>
-        </div>
-        <div class="testimonio">
-          <p>“Muy profesional y comprometido…”</p>
-          <strong>- Fernanda R.</strong>
-        </div>
-        <div class="testimonio">
-          <p>“Gracias por todo el apoyo legal…”</p>
-          <strong>- Mario S.</strong>
-        </div>
-        <div class="testimonio">
-          <p>“Recibí una respuesta rápida…”</p>
-          <strong>- Julia P.</strong>
-        </div>
-        <div class="testimonio">
-          <p>“Sin duda los recomiendo…”</p>
-          <strong>- Andrea L.</strong>
+      <div class="container">
+        <h2 class="section-title">Lo que opinan nuestros clientes</h2>
+        <div class="testimonios-wrapper">
+          <div class="testimonios-carousel">
+            <!-- Testimonio 1 -->
+            <div class="testimonio-card active">
+              <div class="testimonio-content">
+                <div class="quote-icon">“</div>
+                <p class="testimonio-text">El abogado Juan me ayudó a resolver un complejo caso laboral con resultados excepcionales. Su dedicación fue fundamental para ganar el juicio.</p>
+                <div class="client-info">
+                  <div class="client-avatar" style="background-color: #e9b949;">LG</div>
+                  <div>
+                    <strong class="client-name">Laura G.</strong>
+                    <span class="client-position">Empresaria</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonio 2 -->
+            <div class="testimonio-card">
+              <div class="testimonio-content">
+                <div class="quote-icon">“</div>
+                <p class="testimonio-text">Excelente atención y asesoría en mi proceso de divorcio. Me guiaron en cada paso con empatía y profesionalismo absoluto.</p>
+                <div class="client-info">
+                  <div class="client-avatar" style="background-color: #1a365d;">CM</div>
+                  <div>
+                    <strong class="client-name">Carlos M.</strong>
+                    <span class="client-position">Arquitecto</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonio 3 -->
+            <div class="testimonio-card">
+              <div class="testimonio-content">
+                <div class="quote-icon">“</div>
+                <p class="testimonio-text">Muy profesional y comprometido con mi caso de propiedad intelectual. Logramos un acuerdo favorable que superó mis expectativas.</p>
+                <div class="client-info">
+                  <div class="client-avatar" style="background-color: #6c757d;">FR</div>
+                  <div>
+                    <strong class="client-name">Fernanda R.</strong>
+                    <span class="client-position">Diseñadora</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonio 4 -->
+            <div class="testimonio-card">
+              <div class="testimonio-content">
+                <div class="quote-icon">“</div>
+                <p class="testimonio-text">Gracias por todo el apoyo legal durante mi demanda. Su conocimiento y paciencia hicieron la diferencia en mi caso.</p>
+                <div class="client-info">
+                  <div class="client-avatar" style="background-color: #28a745;">MS</div>
+                  <div>
+                    <strong class="client-name">Mario S.</strong>
+                    <span class="client-position">Ingeniero</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonio 5 -->
+            <div class="testimonio-card">
+              <div class="testimonio-content">
+                <div class="quote-icon">“</div>
+                <p class="testimonio-text">Recibí una respuesta rápida y soluciones efectivas cuando más las necesitaba. Definitivamente mi abogado de confianza.</p>
+                <div class="client-info">
+                  <div class="client-avatar" style="background-color: #dc3545;">JP</div>
+                  <div>
+                    <strong class="client-name">Julia P.</strong>
+                    <span class="client-position">Médico</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonio 6 -->
+            <div class="testimonio-card">
+              <div class="testimonio-content">
+                <div class="quote-icon">“</div>
+                <p class="testimonio-text">Sin duda los recomiendo. Manejan cada caso con integridad y obtienen resultados. Mi familia confía plenamente en sus servicios.</p>
+                <div class="client-info">
+                  <div class="client-avatar" style="background-color: #17a2b8;">AL</div>
+                  <div>
+                    <strong class="client-name">Andrea L.</strong>
+                    <span class="client-position">Profesora</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-controls">
+            <button class="control-btn prev-btn" aria-label="Anterior">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="carousel-dots"></div>
+            <button class="control-btn next-btn" aria-label="Siguiente">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -228,9 +376,11 @@
     <footer>
       <div class="footer-container">
         <div class="footer-info">
-          <p>&copy; 2025 Defensa Legal. Todos los derechos reservados.</p>
+          <p>&copy; 2025 Defensa Legal.
+            <br>
+            Todos los derechos reservados.</p>
           <p>
-            correo:
+           <strong>correo:</strong> 
             <a href="mailto:contacto@defensalegal.com"
               >contacto@defensalegal.com</a
             >
