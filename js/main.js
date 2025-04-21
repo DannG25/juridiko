@@ -30,7 +30,7 @@
       }
     }
     
-    // Iniciar animación después de 1 segundo
+    // Inicia animación después de 1 segundo
     setTimeout(typeText, 2000);
     
     // Scroll suave al hacer clic en la flecha
@@ -119,13 +119,13 @@
     });
     
     // Pausar al interactuar
-    carousel.addEventListener('mouseenter', () => {
-      clearInterval(autoScrollInterval);
-    });
+    // carousel.addEventListener('mouseenter', () => {
+    //   clearInterval(autoScrollInterval);
+    // });
     
-    carousel.addEventListener('mouseleave', () => {
-      startAutoScroll();
-    });
+    // carousel.addEventListener('mouseleave', () => {
+    //   startAutoScroll();
+    // });
     
     // Iniciar
     updateCarousel();
