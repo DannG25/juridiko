@@ -1078,88 +1078,189 @@ footer {
   color: #d62828;
 }
 
-/* === RESPONSIVE === */
+/* === SERVICIOS === */
 .servicios-section {
-  padding: 4rem 2rem;
-  text-align: center;
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .titulo-seccion {
-  font-size: 2.8rem;
-  color: #2c3e50;
-  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1a365d;
   margin-bottom: 3rem;
+  position: relative;
 }
 
+.titulo-seccion:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #e9b949;
+  margin: 15px auto 0;
+}
+
+/* Grid de servicios */
 .servicios-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.imagen-central {
+  position: relative;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 3rem;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: center;
 }
 
-.servicio-bloque {
-  flex: 1 1 300px;
+.imagen-destacada {
+  max-height: 500px;
+  width: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-.lista-servicios,
-.lista-servimos {
+.imagen-destacada:hover {
+  transform: scale(1.03);
+}
+
+/* Columnas de contenido */
+.servicios-columna {
+  border-radius: 10px;
+  padding: 2rem;
+  height: 100%;
+}
+
+.lista-servicios {
   list-style: none;
   padding: 0;
-  text-align: left;
 }
 
-.lista-servicios li,
-.lista-servimos li {
-  font-size: 1.05rem;
-  background: #ffffff;
-  border-left: 4px solid #3498db;
-  padding: 0.75rem 1rem;
-  margin-bottom: 0.75rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, background 0.3s ease;
-}
+.lista-servicios li {
+  padding: 1.2rem;
+    margin-bottom: 0.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.8);
+    border-left: 4px solid #e9b949;
+  }
 
-.lista-servicios li:hover,
-.lista-servimos li:hover {
-  background: #eef6fb;
+.lista-servicios li:hover {
   transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: white;
 }
 
-.imagen-central img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 16px;
+.lista-servicios li:last-child {
+  border-bottom: none;
 }
 
+.icono-servicio {
+  color: #1a365d;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  min-width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.servicio-contenido h3 {
+  color: #1a365d;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+
+.servicio-contenido p {
+  color: #6c757d;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Sección de clientes */
 .titulo-subseccion {
+  color: #1a365d;
   font-size: 1.5rem;
-  color: #2c3e50;
   margin-bottom: 1.5rem;
-  text-align: left;
+  text-align: center;
+  position: relative;
 }
 
-@media (max-width: 1024px) {
+.titulo-subseccion:after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #e9b949;
+  margin: 10px auto 0;
+}
+
+.clientes-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.cliente-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cliente-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.icono-cliente {
+  color: #e9b949;
+  font-size: 1.3rem;
+  background: rgba(233, 185, 73, 0.1);
+  padding: 12px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  min-width: 45px;
+}
+
+.cliente-card h4 {
+  color: #1a365d;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+
+.cliente-card p {
+  color: #6c757d;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
   .servicios-grid {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    grid-template-columns: 1fr;
   }
-
-  .servicio-bloque {
-    max-width: 90%;
+  
+  .imagen-central {
+    order: -1;
+    justify-content: center;
+    margin-bottom: 2rem;
   }
-
-  .lista-servicios,
-  .lista-servimos {
-    text-align: center;
-  }
-
-  .titulo-subseccion {
-    text-align: center;
+  
+  .imagen-destacada {
+    max-height: 300px;
   }
 }
