@@ -315,14 +315,6 @@ body {
 .transition-gradient {
   height: 200px;
   width: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgb(73 74 74 / 50%) 0%,
-    rgb(36 77 134 / 30%) 30%, 
-    rgba(233, 185, 73, 0.15) 70%,
-    rgba(248, 249, 250, 0.05) 90%,
-    rgba(248, 249, 250, 0) 100%
-  );
   margin-top: -60px;
   position: relative;
   z-index: 1;
